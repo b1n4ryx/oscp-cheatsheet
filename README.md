@@ -35,3 +35,6 @@ nano /etc/shadow
 su root                           #login with custom password 'bala123123'
 whoami;id;pwd
 ```
+### Sudo Shell Escape Sequences
+
+[GTFOBins](https://gtfobins.github.io/)
