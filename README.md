@@ -2,7 +2,7 @@
 
 ## Linux Privilege Escalation
 
-### Serice Exploit - MySQL UDF Exploit
+### Service Exploit - MySQL UDF Exploit
 ```
 https://www.exploit-db.com/exploits/1518
 
