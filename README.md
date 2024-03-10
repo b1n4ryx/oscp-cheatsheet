@@ -1,4 +1,4 @@
-Comprehensive cheat sheet for OSCP lab and exam. this is with a format for Obsiden template, you can just download and import to use as templater to avoid manual editing of IP address
+Comprehensive cheat sheet for OSCP lab and exam. this is with a format for Obsiden template, you can just download and import to use as template with the help of obsiden templater plugin to avoid manual editing of IP address
 
 ## 1. Basic Enumeration Tools & Commands
 ### 1.1 Nmap Commands
